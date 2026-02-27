@@ -1,6 +1,6 @@
 # Hands-On Machine Learning Exercises (Step by Step)
 
-This repository documents my chapter-by-chapter practice from Aurélien Géron's book *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow*.
+This repository documents my chapter-by-chapter practice from Aurélien Géron's book *Hands-On Machine Learning with PyTorch*.
 
 The goal is to learn ML foundations by implementing concepts directly in notebooks, not just reading theory.
 
