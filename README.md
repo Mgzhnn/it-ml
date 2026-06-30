@@ -1,67 +1,42 @@
-# Hands-On Machine Learning Exercises (Step by Step)
+# Hands-On Machine Learning Workflows
 
-This repository documents my chapter-by-chapter practice from Aurélien Géron's book *Hands-On Machine Learning with PyTorch*.
+Applied machine learning notebooks built while working through core ML topics: regression, classification, training algorithms, trees, ensembles, dimensionality reduction, clustering, Gaussian mixtures, and anomaly detection.
 
-The goal is to learn ML foundations by implementing concepts directly in notebooks, not just reading theory.
+The notebooks are written as workflow-style ML case studies rather than Q&A notes. Each notebook frames the objective, data, metric, validation approach, modeling stages, and next steps. Datasets are downloaded locally when needed and are intentionally not committed.
 
-## What Is Included
+## Notebooks
 
-- `ml_2nd_chapter.ipynb`: end-to-end ML project workflow (housing data)
-- `ml_3rd_chapter.ipynb`: classification with MNIST
-- `ml_4th_chapter.ipynb`: training models (linear/logistic regression)
-- `ml_5th_chapter.ipynb`: decision trees
-- `ml_6th_chapter.ipynb`: ensemble methods
-- `ml_7th_chapter.ipynb`: dimensionality reduction (PCA)
-- `ml_8th_chapter.ipynb`: clustering (K-Means and related topics)
+| Notebook | Focus |
+|---|---|
+| `01_tabular_regression_workflow.ipynb` | California housing regression, preprocessing pipelines, SVR tuning, feature selection, custom transformers, bike sharing regression |
+| `02_classification_workflow.ipynb` | MNIST KNN, image augmentation, Titanic survival prediction, spam classification |
+| `03_softmax_regression_from_scratch_workflow.ipynb` | Softmax regression from scratch with NumPy, batch gradient descent, regularization, early stopping |
+| `04_decision_tree_workflow.ipynb` | Decision tree tuning on moons and a manual random-forest-style majority vote ensemble |
+| `05_ensemble_learning_workflow.ipynb` | Voting and stacking ensembles on MNIST |
+| `06_dimensionality_reduction_workflow.ipynb` | PCA speed/accuracy experiments and MNIST visualization with t-SNE, PCA, LLE, and MDS |
+| `07_unsupervised_learning_workflow.ipynb` | Olivetti faces clustering, K-Means distance features, Gaussian mixtures, anomaly detection |
 
-## Tech Stack
+## Setup
 
-- Python
-- NumPy, Pandas, SciPy
-- Matplotlib
-- Scikit-learn
-- Jupyter Notebook
-
-## Run Locally
+Create an environment and install dependencies:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
-jupyter notebook
 ```
 
-Open any chapter notebook and run cells in order.
+Then open the notebooks with Jupyter or VS Code.
 
-## Data and Artifacts
+Some notebooks use smaller default subsets so they run quickly. Search for flags such as `RUN_EXPENSIVE_MNIST` if you want to run the full experiments.
 
-Large generated files and local dataset caches are intentionally excluded from git (see `.gitignore`) to keep the repository lightweight and GitHub-compatible.
+## Repository Hygiene
 
-If a notebook needs data, it should download it or regenerate it from code.
+The repository excludes:
 
-## Suggested Project Layout (Next Step)
+- downloaded datasets and local dataset caches
+- generated model files
+- memory-mapped arrays
+- temporary PDF/image render folders
+- the source book PDF
+- Jupyter checkpoints and editor metadata
 
-```text
-it-ml/
-  notebooks/
-  src/
-  reports/
-  data/            # ignored
-  artifacts/       # ignored
-  README.md
-  requirements.txt
-```
-
-Current notebooks are kept at the repository root for continuity. As the project grows, moving them into `notebooks/` is recommended.
-
-## Learning Notes
-
-This is an active learning log. I improve notebooks over time by:
-
-- adding clearer markdown explanations
-- refactoring repeated code into reusable helpers
-- comparing baseline vs improved model performance
-
-## Attribution
-
-Exercises and concepts are based on *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow* by Aurélien Géron.
+This keeps the GitHub repository focused on the workflow notebooks and reproducible code.

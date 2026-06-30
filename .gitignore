@@ -12,16 +12,30 @@ env/
 
 # Jupyter
 .ipynb_checkpoints/
+*.nbconvert.ipynb
 
 # Local data caches and generated artifacts
 data/
 datasets/
+scikit_learn_data/
+tmp/
+generated_chapter_pdfs/
+HandsOnML.pdf
+chapter_02_end_to_end_ml_project/
+chapter_03_classification/
+chapter_04_training_models/
+chapter_05_decision_trees/
+chapter_06_ensemble_learning/
+chapter_07_dimensionality_reduction/
+chapter_08_unsupervised_learning/
+PROFILE_README.md
 *.mmap
 *.pkl
 *.joblib
 *.h5
 *.onnx
+*.dot
 
 # Optional local notebook exports
 *.html
-
+*.pdf
